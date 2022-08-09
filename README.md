@@ -15,7 +15,7 @@ In particolare il sistema deve avere le seguenti funzionalità:
 *Effettuare una simulazione 
 *Ricaricare il credito di un cliente
 
-Le chiamate vengono gestite tramite richieste HTTP (GET o POST) ed è sempre richiesta l'autenticazione tramite JWT.
+
 
 # Funzioni del sistema
 | Funzioni | Ruolo |
@@ -29,4 +29,20 @@ Le chiamate vengono gestite tramite richieste HTTP (GET o POST) ed è sempre ric
 | Elencare revisioni cancellate  | User |
 | Ripristinare una revisione  | User  |
 | Effettuare una simulazione  | User  |
-| Ricaricare credito di un utente  | User  |
+| Ricaricare credito di un utente  | Admin |
+Le chiamate vengono gestite tramite richieste HTTP (GET o POST) ed è sempre richiesta l'autenticazione tramite JWT.
+
+# Rotte
+| Tipo | Rotte |
+| ------------- | ------------- |
+| POST | /create-model |
+| POST | /execute-model |
+| POST | /create-revision |
+| GET | /show-revisions |
+| GET | /show-models |
+| POST | /disable-revision |
+| GET | /show-cancelled-revision |
+| POST | /enable-revision |
+| GET | /simulate-model |
+| POST | /refill |
+
