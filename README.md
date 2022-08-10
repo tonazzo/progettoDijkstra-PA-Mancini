@@ -358,8 +358,15 @@ La Catena di Responsabilità è formata da degli handler (funzioni o metodi), ch
 Le funzioni middleware sono funzioni che hanno accesso all'oggetto richiesta (req), all'oggetto risposta (res) e alla successiva funzione middleware nel ciclo richiesta-risposta dell'applicazione. La funzione middleware successiva è comunemente indicata da una variabile denominata next.
 Nel progetto utilizziamo la catena di responsabilità insieme al middleware per verificare che per ciascuna delle operazioni che si vogliono compiere siano rispettati tutti i requisiti, se così non fosse il middleware che non viene rispettato segnalerà l'errore opportuno.
 
+# Come avviare il progetto
+Per poter eseguire il progetto è necessario aver installato Docker.
 
-
+Gli step sono i seguenti:
+1. Clonare repository,
+2. Attivare docker,
+3. All'interno della cartella, aprire il terminale e digitare: docker compose build (Attendere che l'esecuzione sia completata),
+4. Digitare: docker compose up (Attendere che l'esecuzione sia completata),
+5. Il programma è in esecuzione.
 
 
 
