@@ -18,6 +18,7 @@ In particolare il sistema deve avere le seguenti funzionalità:
 
 
 # Funzioni del sistema
+<div align="center">
 | Funzioni | Ruolo |
 | ------------- | ------------- |
 | Creare nuovo modello  | User  |
@@ -30,7 +31,7 @@ In particolare il sistema deve avere le seguenti funzionalità:
 | Ripristinare una revisione  | User  |
 | Effettuare una simulazione  | User  |
 | Ricaricare credito di un utente  | Admin |
-
+</div>
 Le chiamate vengono gestite tramite richieste HTTP (GET o POST) ed è sempre richiesta l'autenticazione tramite JWT.
 
 # Rotte
