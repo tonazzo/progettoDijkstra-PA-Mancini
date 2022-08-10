@@ -333,7 +333,7 @@ Da effettuare tramite token JWT che deve contenere un payload JSON con la seguen
 
 ## Use Case Diagram
 
-![UseCase]([https://github.com/GiovanniBaldascino/progettoDijkstra-PA-Mancini/blob/main/UseCase.png](https://raw.githubusercontent.com/GiovanniBaldascino/progettoDijkstra-PA-Mancini/main/UseCase.png))
+![UseCase](https://raw.githubusercontent.com/GiovanniBaldascino/progettoDijkstra-PA-Mancini/main/UseCase.png)
 
 ## Interaction Overview Diagram
 
