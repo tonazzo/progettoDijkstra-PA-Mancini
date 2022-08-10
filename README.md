@@ -6,7 +6,7 @@ Il progetto consiste in un sistema che consenta di gestire la creazione e valuta
 il sistema deve prevedere la possibilità di gestire eventuali revisioni dei modelli e di eseguire delle simulazioni.
 In particolare il sistema deve avere le seguenti funzionalità:
 
-*Creare un nuovo modello specificando i pesi degli archi
+Creare un nuovo modello specificando i pesi degli archi
 Eseguire il modello, specificando start e goal
 Creare una revisione di un modello esistente, cambiando pesi e/o aggiungendo/rimuovendo nodi
 Restituire l’elenco delle revisioni di un dato modello
