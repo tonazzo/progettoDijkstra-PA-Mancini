@@ -332,7 +332,7 @@ Da effettuare tramite token JWT che deve contenere un payload JSON con la seguen
 # PROGETTAZIONE – UML
 
 ## Use Case Diagram
-![Use Case DIagram] (https://github.com/GiovanniBaldascino/progettoDijkstra-PA-Mancini/blob/main/UseCase.png)
+![Use Case DIagram] ([https://github.com/GiovanniBaldascino/progettoDijkstra-PA-Mancini/blob/main/UseCase.png](https://raw.githubusercontent.com/GiovanniBaldascino/progettoDijkstra-PA-Mancini/main/UseCase.png))
 ## Interaction Overview Diagram
 
 ## Sequence Diagram
