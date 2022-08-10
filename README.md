@@ -6,16 +6,16 @@ Il progetto consiste in un sistema che consenta di gestire la creazione e valuta
 il sistema deve prevedere la possibilità di gestire eventuali revisioni dei modelli e di eseguire delle simulazioni.
 In particolare il sistema deve avere le seguenti funzionalità:
 
-*Creare un nuovo modello specificando i pesi degli archi
-*Eseguire il modello, specificando start e goal
-*Creare una revisione di un modello esistente, cambiando pesi e/o aggiungendo/rimuovendo nodi
-*Restituire l’elenco delle revisioni di un dato modello
-*Restituire l’elenco dei modelli
-*Cancellare una revisione di un modello
-*Elencare le revisioni che sono state cancellate
-*Ripristinare una revisione che è stata cancellata
-*Effettuare una simulazione 
-*Ricaricare il credito di un cliente
+* Creare un nuovo modello specificando i pesi degli archi
+* Eseguire il modello, specificando start e goal
+* Creare una revisione di un modello esistente, cambiando pesi e/o aggiungendo/rimuovendo nodi
+* Restituire l’elenco delle revisioni di un dato modello
+* Restituire l’elenco dei modelli
+* Cancellare una revisione di un modello
+* Elencare le revisioni che sono state cancellate
+* Ripristinare una revisione che è stata cancellata
+* Effettuare una simulazione 
+* Ricaricare il credito di un cliente
 
 
 
@@ -50,7 +50,7 @@ Le chiamate vengono gestite tramite richieste HTTP (GET o POST) ed è sempre ric
 | GET | /simulate-model |
 | POST | /refill |
 
-###create-model
+### create-model
 Tramite questa richiesta è possibile creare un nuovo modello specificando il grafo con i relativi pesi, per ogni modello valido deve essere addebitato un numero di token predefinito per ogni arco e per ogni nodo.
 Da effettuare tramite token JWT che deve contenere un payload JSON con la seguente struttura:
 ```json
@@ -118,5 +118,25 @@ Da effettuare tramite token JWT che deve contenere un payload JSON con la seguen
             "Bari": 354
         }
     }
+}
+```
+
+## execute-model
+Tramite questa richiesta è possibile eseguire il modello specificando l’eventuale versione altrimenti di default si considererà l’ultima.
+Da effettuare tramite token JWT che deve contenere un payload JSON con la seguente struttura:
+* Specificando la versione
+```json
+{
+    "model_id": "32",
+    "start": "Milano",
+    "goal": "Bari"
+}
+```
+* Default
+```json
+{
+    "model_id": "-1",
+    "start": "Milano",
+    "goal": "Catanzaro"
 }
 ```
