@@ -337,6 +337,8 @@ Da effettuare tramite token JWT che deve contenere un payload JSON con la seguen
 
 ## Interaction Overview Diagram
 
+![InteractionOverview]()
+
 ## Sequence Diagram
 
 # PATTERN UTILIZZATI
