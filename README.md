@@ -337,7 +337,7 @@ Da effettuare tramite token JWT che deve contenere un payload JSON con la seguen
 
 ## Interaction Overview Diagram
 
-![InteractionOverview]()
+![InteractionOverview](https://raw.githubusercontent.com/GiovanniBaldascino/progettoDijkstra-PA-Mancini/main/InteractionOverview.jpg)
 
 ## Sequence Diagram
 
