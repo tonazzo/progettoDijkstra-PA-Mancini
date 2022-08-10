@@ -50,3 +50,73 @@ Le chiamate vengono gestite tramite richieste HTTP (GET o POST) ed è sempre ric
 | GET | /simulate-model |
 | POST | /refill |
 
+###create-model
+Tramite questa richiesta è possibile creare un nuovo modello specificando il grafo con i relativi pesi, per ogni modello valido deve essere addebitato un numero di token predefinito per ogni arco e per ogni nodo.
+Da effettuare tramite token JWT che deve contenere un payload JSON con la seguente struttura:
+```json
+{
+    "description":
+    {
+        "Milano":{
+            "Torino": 176,
+            "Firenze": 303,
+            "Bologna": 214,
+            "Venezia": 283
+        },
+        "Torino":{
+            "Milano": 176,
+            "Bologna": 332,
+            "Firenze": 422
+        },
+        "Venezia":{
+            "Milano": 283,
+            "Bologna": 154
+        },
+        "Bologna":{
+            "Milano": 214,
+            "Torino": 332,
+            "Venezia": 154,
+            "Firenze": 107,
+            "Ancona": 230,
+            "Roma": 376
+        },
+        "Firenze":{
+            "Milano": 303,
+            "Torino": 422,
+            "Bologna": 107,
+            "Ancona": 294,
+            "Roma": 274
+        },
+        "Ancona":{
+            "Bologna": 230,
+            "Firenze": 294,
+            "Roma": 297,
+            "Napoli": 418,
+            "Bari": 466
+        },
+        "Roma":{
+            "Bologna": 376,
+            "Firenze": 274,
+            "Ancona": 297,
+            "Napoli": 226,
+            "Bari": 432
+        },
+        "Napoli":{
+            "Ancona": 418,
+            "Roma": 226,
+            "Bari": 266,
+            "Catanzaro": 403
+        },
+        "Bari":{
+            "Ancona": 466,
+            "Roma": 432,
+            "Napoli": 266,
+            "Catanzaro": 354
+        },
+        "Catanzaro":{
+            "Napoli": 403,
+            "Bari": 354
+        }
+    }
+}
+```
