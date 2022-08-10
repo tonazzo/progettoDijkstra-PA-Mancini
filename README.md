@@ -2,8 +2,10 @@
 Progetto per del corso di Programmazione Avanzata tenuto dal prof. Mancini
 
 ## Obiettivo del progetto
-Il progetto consiste in un sistema che consenta di gestire la creazione e valutazione di modelli di ottimizzazione su grafo; il sistema deve prevedere la possibilità di gestire eventuali revisioni dei modelli e di eseguire delle simulazioni.
+Il progetto consiste in un sistema che consenta di gestire la creazione e valutazione di modelli di ottimizzazione su grafo;l'algoritmo utilizzato per calcolare il cammino minimo è quello di Dijkstra.
+il sistema deve prevedere la possibilità di gestire eventuali revisioni dei modelli e di eseguire delle simulazioni.
 In particolare il sistema deve avere le seguenti funzionalità:
+
 *Creare un nuovo modello specificando i pesi degli archi
 *Eseguire il modello, specificando start e goal
 *Creare una revisione di un modello esistente, cambiando pesi e/o aggiungendo/rimuovendo nodi
