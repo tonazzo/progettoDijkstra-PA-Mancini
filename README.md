@@ -10,12 +10,12 @@ In particolare il sistema deve avere le seguenti funzionalità:
 * [x] Eseguire il modello, specificando start e goal
 * [x] Creare una revisione di un modello esistente, cambiando pesi e/o aggiungendo/rimuovendo nodi
 * [x] Restituire l’elenco delle revisioni di un dato modello
-* Restituire l’elenco dei modelli
-* Cancellare una revisione di un modello
-* Elencare le revisioni che sono state cancellate
-* Ripristinare una revisione che è stata cancellata
-* Effettuare una simulazione 
-* Ricaricare il credito di un cliente
+* [x] Restituire l’elenco dei modelli
+* [x] Cancellare una revisione di un modello
+* [x] Elencare le revisioni che sono state cancellate
+* [x] Ripristinare una revisione che è stata cancellata
+* [x] Effettuare una simulazione 
+* [x] Ricaricare il credito di un cliente
 
 
 
@@ -34,7 +34,7 @@ In particolare il sistema deve avere le seguenti funzionalità:
 | Effettuare una simulazione  | User  |
 | Ricaricare credito di un utente  | Admin |
 
-Le chiamate vengono gestite tramite richieste HTTP (GET o POST) ed è sempre richiesta l'autenticazione tramite JWT.
+Le chiamate vengono gestite tramite richieste HTTP (**GET** o **POST**) ed è sempre richiesta l'autenticazione tramite **JWT**.
 
 # Rotte
 | Tipo | Rotte |
@@ -52,7 +52,7 @@ Le chiamate vengono gestite tramite richieste HTTP (GET o POST) ed è sempre ric
 
 ### /create-model
 Tramite questa richiesta è possibile creare un nuovo modello specificando il grafo con i relativi pesi, per ogni modello valido deve essere addebitato un numero di token predefinito per ogni arco e per ogni nodo.  
-Da effettuare tramite token JWT che deve contenere un payload JSON con la seguente struttura:
+Da effettuare tramite token **JWT** che deve contenere un payload JSON con la seguente struttura:
 ```json
 {
     "description":
@@ -123,7 +123,7 @@ Da effettuare tramite token JWT che deve contenere un payload JSON con la seguen
 
 ### /execute-model
 Tramite questa richiesta è possibile eseguire il modello specificando l’eventuale versione altrimenti di default si considererà l’ultima.  
-Da effettuare tramite token JWT che deve contenere un payload JSON con la seguente struttura:
+Da effettuare tramite token **JWT** che deve contenere un payload JSON con la seguente struttura:
 * Specificando la versione
 ```json
 {
@@ -143,7 +143,7 @@ Da effettuare tramite token JWT che deve contenere un payload JSON con la seguen
 
 ### /create-revision
 Tramite questa richiesta è possibile creare una revisione di un modello esistente: aggiungendo uno o più nodi, rimuovendo uno o più nodi oppure cambiando lo Start o il Goal.  
-Da effettuare tramite token JWT che deve contenere un payload JSON con la seguente struttura:
+Da effettuare tramite token **JWT** che deve contenere un payload JSON con la seguente struttura:
 * Aggiunta di un singolo nodo
 ```json
 {
@@ -202,7 +202,7 @@ Da effettuare tramite token JWT che deve contenere un payload JSON con la seguen
 
 ### /show-revisions
 Tramite questa richiesta è possibile ottenere l’elenco dele revisioni di un dato modello filtrando per data della modifica e/o per numero di variabili.  
-Da effettuare tramite token JWT che deve contenere un payload JSON con la seguente struttura:
+Da effettuare tramite token **JWT** che deve contenere un payload JSON con la seguente struttura:
 * Senza filtri
 ```json
 {
@@ -234,7 +234,7 @@ Da effettuare tramite token JWT che deve contenere un payload JSON con la seguen
 
 ### /show-models
 Tramite questa richiesta è possibile ottenere l’elenco dei modelli filtrando per numero di nodi e/o numero di archi.  
-Da effettuare tramite token JWT che deve contenere un payload JSON con la seguente struttura:
+Da effettuare tramite token **JWT** che deve contenere un payload JSON con la seguente struttura:
 * Senza filtri
 ```json
 {
@@ -266,7 +266,7 @@ Da effettuare tramite token JWT che deve contenere un payload JSON con la seguen
 
 ### /disable-revision
 Tramite questa richiesta è possibile cancellare una revisione di un modello.  
-Da effettuare tramite token JWT che deve contenere un payload JSON con la seguente struttura:
+Da effettuare tramite token **JWT** che deve contenere un payload JSON con la seguente struttura:
 ```json
 {
     "revision_id": 32,
@@ -293,7 +293,7 @@ Da effettuare tramite token JWT che deve contenere un payload JSON con la seguen
 Tramite questa richiesta è possibile effettuare una simulazione che consenta di variare: 
 * peso di un arco specificando valore iniziale, finale e il passo di incremento;
 * peso di più archi specificando valore iniziale, finale e passo di incremento;
-Da effettuare tramite token JWT che deve contenere un payload JSON con la seguente struttura:
+Da effettuare tramite token **JWT** che deve contenere un payload JSON con la seguente struttura:
 
 * Variando singolo arco
 ```json
@@ -320,7 +320,7 @@ Da effettuare tramite token JWT che deve contenere un payload JSON con la seguen
 
 ### /refill 
 Tramite questa richiesta è possibile ricaricare il credito di un utente; può essere richiamata solo dagli utenti autenticati con ruolo di admin.  
-Da effettuare tramite token JWT che deve contenere un payload JSON con la seguente struttura:
+Da effettuare tramite token **JWT** che deve contenere un payload JSON con la seguente struttura:
 ```json
 {
     "email": "rich@dj.it",
@@ -365,28 +365,28 @@ Da effettuare tramite token JWT che deve contenere un payload JSON con la seguen
 # PATTERN UTILIZZATI
 
 ## Factory Method
-Il factory method è un pattern di progettazione creazionale che fornisce un’interfaccia per la creazione di oggetti in una superclasse, ma consente alle sottoclassi di modificare il tipo di oggetti che verranno creati.  
+Il **factory method** è un pattern di progettazione creazionale che fornisce un’interfaccia per la creazione di oggetti in una superclasse, ma consente alle sottoclassi di modificare il tipo di oggetti che verranno creati.  
 Nel nostro progetto utilizziamo questo pattern per la creazione dei messaggi relativi allo stato dell'operazione che si vuole compiere, se questa va a buon fine verrà segnalato un successo, altrimenti un errore.
 
 ## Singleton
-Il singleton è un design pattern creazionale che ha lo scopo di garantire che di una determinata classe venga creata una e una sola istanza, e di fornire un punto di accesso globale a tale istanza.  
+Il **singleton** è un design pattern creazionale che ha lo scopo di garantire che di una determinata classe venga creata una e una sola istanza, e di fornire un punto di accesso globale a tale istanza.  
 Nel nostro progetto lo utilizziamo per effettuare la connesione al database, in maniera tale che di essa vi sia una sola istanza così da non consumare inutilmente risorse computazionali.
 
 ## Chain Of Responsability & Middleware
-La catena di responsabilità è un pattern comportamentale che consente di passare le richieste lungo una catena di gestori. Alla ricezione di una richiesta, ciascun handler decide di elaborare la richiesta o di passarla al successivo handler della catena.  
+La **catena di responsabilità** è un pattern comportamentale che consente di passare le richieste lungo una catena di gestori. Alla ricezione di una richiesta, ciascun handler decide di elaborare la richiesta o di passarla al successivo handler della catena.  
 È molto simile ad un decoratore ma a differenza di quest’ultimo, la catena di responsabilità può essere interrotta.  
 La Catena di Responsabilità è formata da degli handler (funzioni o metodi), che hanno lo scopo di verificare se quello che gli viene passato soddisfa o meno dei criteri. Se il criterio è soddisfatto, non si ritorna, come avveniva nel Proxy, ma si va avanti passando il controllo all’handler successivo.  
-Le funzioni middleware sono funzioni che hanno accesso all'oggetto richiesta (req), all'oggetto risposta (res) e alla successiva funzione middleware nel ciclo richiesta-risposta dell'applicazione. La funzione middleware successiva è comunemente indicata da una variabile denominata next.  
-Nel progetto utilizziamo la catena di responsabilità insieme al middleware per verificare che per ciascuna delle operazioni che si vogliono compiere siano rispettati tutti i requisiti, se così non fosse il middleware che non viene rispettato segnalerà l'errore opportuno.
+Le funzioni **middleware** sono funzioni che hanno accesso all'oggetto richiesta (req), all'oggetto risposta (res) e alla successiva funzione **middleware** nel ciclo richiesta-risposta dell'applicazione. La funzione **middleware** successiva è comunemente indicata da una variabile denominata next.  
+Nel progetto utilizziamo la **catena di responsabilità** insieme al **middleware** per verificare che per ciascuna delle operazioni che si vogliono compiere siano rispettati tutti i requisiti, se così non fosse il **middleware** che non viene rispettato segnalerà l'errore opportuno.
 
 # Come avviare il progetto
-Per poter eseguire il progetto è necessario aver installato Docker.
+Per poter eseguire il progetto è necessario aver installato **Docker**.
 
 Gli step sono i seguenti:
 1. Clonare repository,
 2. Attivare docker,
-3. All'interno della cartella, aprire il terminale e digitare: docker compose build (Attendere che l'esecuzione sia completata),
-4. Digitare: docker compose up (Attendere che l'esecuzione sia completata),
+3. All'interno della cartella, aprire il terminale e digitare: *docker compose build* (Attendere che l'esecuzione sia completata),
+4. Digitare: *docker compose up* (Attendere che l'esecuzione sia completata),
 5. Il programma è in esecuzione.
 
 
