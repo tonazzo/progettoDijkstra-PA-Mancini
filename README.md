@@ -348,15 +348,15 @@ Da effettuare tramite token JWT che deve contenere un payload JSON con la seguen
 ### Creare revisione
 ![3SD](https://raw.githubusercontent.com/GiovanniBaldascino/progettoDijkstra-PA-Mancini/main/3SD.png)
 ### Elenco revisioni
-![4SD](https://raw.githubusercontent.com/GiovanniBaldascino/progettoDijkstra-PA-Mancini/main/4SD.png)
-### Elenco modelli
-![5SD](https://raw.githubusercontent.com/GiovanniBaldascino/progettoDijkstra-PA-Mancini/main/5SD.png)
-### Cancellare revisione
-![6SD](https://raw.githubusercontent.com/GiovanniBaldascino/progettoDijkstra-PA-Mancini/main/6SD.png)
-### Elenco revisioni cancellate
-![7SD](https://raw.githubusercontent.com/GiovanniBaldascino/progettoDijkstra-PA-Mancini/main/7SD.png)
-### Ripristinare revisione
 ![8SD](https://raw.githubusercontent.com/GiovanniBaldascino/progettoDijkstra-PA-Mancini/main/8SD.png)
+### Elenco modelli
+![7SD](https://raw.githubusercontent.com/GiovanniBaldascino/progettoDijkstra-PA-Mancini/main/7SD.png)
+### Cancellare revisione
+![4SD](https://raw.githubusercontent.com/GiovanniBaldascino/progettoDijkstra-PA-Mancini/main/4SD.png)
+### Elenco revisioni cancellate
+![6SD](https://raw.githubusercontent.com/GiovanniBaldascino/progettoDijkstra-PA-Mancini/main/6SD.png)
+### Ripristinare revisione
+![5SD](https://raw.githubusercontent.com/GiovanniBaldascino/progettoDijkstra-PA-Mancini/main/5SD.png)
 ### Effettuare simulazione
 ![9SD](https://raw.githubusercontent.com/GiovanniBaldascino/progettoDijkstra-PA-Mancini/main/9SD.png)
 ### Ricaricare credito
