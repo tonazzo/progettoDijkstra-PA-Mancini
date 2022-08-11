@@ -2,7 +2,7 @@
 Progetto per del corso di Programmazione Avanzata tenuto dal prof. Mancini
 
 ## Obiettivo del progetto
-Il progetto consiste in un sistema che consenta di gestire la creazione e valutazione di modelli di ottimizzazione su grafo;l'algoritmo utilizzato per calcolare il cammino minimo è quello di Dijkstra.  
+Il progetto consiste in un sistema che consenta di gestire la creazione e valutazione di modelli di ottimizzazione su grafo; l'algoritmo utilizzato per calcolare il cammino minimo è quello di Dijkstra.  
 Il sistema deve prevedere la possibilità di gestire eventuali revisioni dei modelli e di eseguire delle simulazioni.
 In particolare il sistema deve avere le seguenti funzionalità:
 
@@ -51,7 +51,7 @@ Le chiamate vengono gestite tramite richieste HTTP (GET o POST) ed è sempre ric
 | POST | /refill |
 
 ### /create-model
-Tramite questa richiesta è possibile creare un nuovo modello specificando il grafo con i relativi pesi, per ogni modello valido deve essere addebitato un numero di token predefinito per ogni arco e per ogni nodo.
+Tramite questa richiesta è possibile creare un nuovo modello specificando il grafo con i relativi pesi, per ogni modello valido deve essere addebitato un numero di token predefinito per ogni arco e per ogni nodo.  
 Da effettuare tramite token JWT che deve contenere un payload JSON con la seguente struttura:
 ```json
 {
@@ -122,7 +122,7 @@ Da effettuare tramite token JWT che deve contenere un payload JSON con la seguen
 ```
 
 ### /execute-model
-Tramite questa richiesta è possibile eseguire il modello specificando l’eventuale versione altrimenti di default si considererà l’ultima.
+Tramite questa richiesta è possibile eseguire il modello specificando l’eventuale versione altrimenti di default si considererà l’ultima.  
 Da effettuare tramite token JWT che deve contenere un payload JSON con la seguente struttura:
 * Specificando la versione
 ```json
@@ -142,7 +142,7 @@ Da effettuare tramite token JWT che deve contenere un payload JSON con la seguen
 ```
 
 ### /create-revision
-Tramite questa richiesta è possibile creare una revisione di un modello esistente: aggiungendo uno o più nodi, rimuovendo uno o più nodi oppure cambiando lo Start o il Goal.
+Tramite questa richiesta è possibile creare una revisione di un modello esistente: aggiungendo uno o più nodi, rimuovendo uno o più nodi oppure cambiando lo Start o il Goal.  
 Da effettuare tramite token JWT che deve contenere un payload JSON con la seguente struttura:
 * Aggiunta di un singolo nodo
 ```json
@@ -201,7 +201,7 @@ Da effettuare tramite token JWT che deve contenere un payload JSON con la seguen
 ```
 
 ### /show-revisions
-Tramite questa richiesta è possibile ottenere l’elenco dele revisioni di un dato modello filtrando per data della modifica e/o per numero di variabili.
+Tramite questa richiesta è possibile ottenere l’elenco dele revisioni di un dato modello filtrando per data della modifica e/o per numero di variabili.  
 Da effettuare tramite token JWT che deve contenere un payload JSON con la seguente struttura:
 * Senza filtri
 ```json
@@ -233,7 +233,7 @@ Da effettuare tramite token JWT che deve contenere un payload JSON con la seguen
 ```
 
 ### /show-models
-Tramite questa richiesta è possibile ottenere l’elenco dei modelli filtrando per numero di nodi e/o numero di archi.
+Tramite questa richiesta è possibile ottenere l’elenco dei modelli filtrando per numero di nodi e/o numero di archi.  
 Da effettuare tramite token JWT che deve contenere un payload JSON con la seguente struttura:
 * Senza filtri
 ```json
@@ -265,7 +265,7 @@ Da effettuare tramite token JWT che deve contenere un payload JSON con la seguen
 ```
 
 ### /disable-revision
-Tramite questa richiesta è possibile cancellare una revisione di un modello.
+Tramite questa richiesta è possibile cancellare una revisione di un modello.  
 Da effettuare tramite token JWT che deve contenere un payload JSON con la seguente struttura:
 ```json
 {
@@ -275,12 +275,12 @@ Da effettuare tramite token JWT che deve contenere un payload JSON con la seguen
 ```
 
 ### /show-cancelled-revision
-Tramite questa richiesta è possibile ottenere l’elenco delle revisioni che sono state cancellate.
+Tramite questa richiesta è possibile ottenere l’elenco delle revisioni che sono state cancellate.  
 Da effettuare tramite token JWT.
 
 
 ### /enable-revision
-Tramite questa richiesta è possibile ripristinare una revisione che è stata cancellata.
+Tramite questa richiesta è possibile ripristinare una revisione che è stata cancellata.  
 Da effettuare tramite token JWT che deve contenere un payload JSON con la seguente struttura:
 ```json
 {
@@ -319,7 +319,7 @@ Da effettuare tramite token JWT che deve contenere un payload JSON con la seguen
 ```
 
 ### /refill 
-Tramite questa richiesta è possibile ricaricare il credito di un utente; può essere richiamata solo dagli utenti autenticati con ruolo di admin.
+Tramite questa richiesta è possibile ricaricare il credito di un utente; può essere richiamata solo dagli utenti autenticati con ruolo di admin.  
 Da effettuare tramite token JWT che deve contenere un payload JSON con la seguente struttura:
 ```json
 {
