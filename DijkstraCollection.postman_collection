@@ -1,0 +1,1341 @@
+{
+	"info": {
+		"_postman_id": "eaa3ee80-44f9-4b28-aabb-bb76ebfae6de",
+		"name": "Master collection Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "refill",
+			"item": [
+				{
+					"name": "Success",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRvbnlAZGouaXQifQ.XjF0DYZjlfqZjRRlz4CyBDpkd5dew9riTbigSXSA0gM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"rich@dj.it\",\r\n    \"token\": 600\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/refill",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"refill"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User not found",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRvbnlAZGouaXQifQ.XjF0DYZjlfqZjRRlz4CyBDpkd5dew9riTbigSXSA0gM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"bloom@dj.it\",\r\n    \"token\": 150\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/refill",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"refill"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin not found",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRvbnlzQGRqLml0In0.-SJ1ztrT2NcFsnkSWJrmBOaeYV_TiU3RK5-lsrjH1mE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"rich@dj.it\",\r\n    \"token\": 300\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/refill",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"refill"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User is not Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"rich@dj.it\",\r\n    \"token\": 300\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/refill",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"refill"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "create-model",
+			"item": [
+				{
+					"name": "Success",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\":\r\n    {\r\n        \"Milano\":{\r\n            \"Torino\": 176,\r\n            \"Firenze\": 303,\r\n            \"Bologna\": 214,\r\n            \"Venezia\": 283\r\n        },\r\n        \"Torino\":{\r\n            \"Milano\": 176,\r\n            \"Bologna\": 332,\r\n            \"Firenze\": 422\r\n        },\r\n        \"Venezia\":{\r\n            \"Milano\": 283,\r\n            \"Bologna\": 154\r\n        },\r\n        \"Bologna\":{\r\n            \"Milano\": 214,\r\n            \"Torino\": 332,\r\n            \"Venezia\": 154,\r\n            \"Firenze\": 107,\r\n            \"Ancona\": 230,\r\n            \"Roma\": 376\r\n        },\r\n        \"Firenze\":{\r\n            \"Milano\": 303,\r\n            \"Torino\": 422,\r\n            \"Bologna\": 107,\r\n            \"Ancona\": 294,\r\n            \"Roma\": 274\r\n        },\r\n        \"Ancona\":{\r\n            \"Bologna\": 230,\r\n            \"Firenze\": 294,\r\n            \"Roma\": 297,\r\n            \"Napoli\": 418,\r\n            \"Bari\": 466\r\n        },\r\n        \"Roma\":{\r\n            \"Bologna\": 376,\r\n            \"Firenze\": 274,\r\n            \"Ancona\": 297,\r\n            \"Napoli\": 226,\r\n            \"Bari\": 432\r\n        },\r\n        \"Napoli\":{\r\n            \"Ancona\": 418,\r\n            \"Roma\": 226,\r\n            \"Bari\": 266,\r\n            \"Catanzaro\": 403\r\n        },\r\n        \"Bari\":{\r\n            \"Ancona\": 466,\r\n            \"Roma\": 432,\r\n            \"Napoli\": 266,\r\n            \"Catanzaro\": 354\r\n        },\r\n        \"Catanzaro\":{\r\n            \"Napoli\": 403,\r\n            \"Bari\": 354\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/create-model",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"create-model"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insufficient token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBvb3JAZGouaXQifQ._qH6A0vT-r4h212_0MaN8OI6rwx5979DrtHOsB2ou_o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\":\r\n    {\r\n        \"Milano\":{\r\n            \"Torino\": 176,\r\n            \"Firenze\": 303,\r\n            \"Bologna\": 214,\r\n            \"Venezia\": 283\r\n        },\r\n        \"Torino\":{\r\n            \"Milano\": 176,\r\n            \"Bologna\": 332,\r\n            \"Firenze\": 422\r\n        },\r\n        \"Venezia\":{\r\n            \"Milano\": 283,\r\n            \"Bologna\": 154\r\n        },\r\n        \"Bologna\":{\r\n            \"Milano\": 214,\r\n            \"Torino\": 332,\r\n            \"Venezia\": 154,\r\n            \"Firenze\": 107,\r\n            \"Ancona\": 230,\r\n            \"Roma\": 376\r\n        },\r\n        \"Firenze\":{\r\n            \"Milano\": 303,\r\n            \"Torino\": 422,\r\n            \"Bologna\": 107,\r\n            \"Ancona\": 294,\r\n            \"Roma\": 274\r\n        },\r\n        \"Ancona\":{\r\n            \"Bologna\": 230,\r\n            \"Firenze\": 294,\r\n            \"Roma\": 297,\r\n            \"Napoli\": 418,\r\n            \"Bari\": 466\r\n        },\r\n        \"Roma\":{\r\n            \"Bologna\": 376,\r\n            \"Firenze\": 274,\r\n            \"Ancona\": 297,\r\n            \"Napoli\": 226,\r\n            \"Bari\": 432\r\n        },\r\n        \"Napoli\":{\r\n            \"Ancona\": 418,\r\n            \"Roma\": 226,\r\n            \"Bari\": 266,\r\n            \"Catanzaro\": 403\r\n        },\r\n        \"Bari\":{\r\n            \"Ancona\": 466,\r\n            \"Roma\": 432,\r\n            \"Napoli\": 266,\r\n            \"Catanzaro\": 354\r\n        },\r\n        \"Catanzaro\":{\r\n            \"Napoli\": 403,\r\n            \"Bari\": 354\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/create-model",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"create-model"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User not found",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRvbnlzQGRqLml0In0.-SJ1ztrT2NcFsnkSWJrmBOaeYV_TiU3RK5-lsrjH1mE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\":\r\n    {\r\n        \"Milano\":{\r\n            \"Torino\": 176,\r\n            \"Firenze\": 303,\r\n            \"Bologna\": 214,\r\n            \"Venezia\": 283\r\n        },\r\n        \"Torino\":{\r\n            \"Milano\": 176,\r\n            \"Bologna\": 332,\r\n            \"Firenze\": 422\r\n        },\r\n        \"Venezia\":{\r\n            \"Milano\": 283,\r\n            \"Bologna\": 154\r\n        },\r\n        \"Bologna\":{\r\n            \"Milano\": 214,\r\n            \"Torino\": 332,\r\n            \"Venezia\": 154,\r\n            \"Firenze\": 107,\r\n            \"Ancona\": 230,\r\n            \"Roma\": 376\r\n        },\r\n        \"Firenze\":{\r\n            \"Milano\": 303,\r\n            \"Torino\": 422,\r\n            \"Bologna\": 107,\r\n            \"Ancona\": 294,\r\n            \"Roma\": 274\r\n        },\r\n        \"Ancona\":{\r\n            \"Bologna\": 230,\r\n            \"Firenze\": 294,\r\n            \"Roma\": 297,\r\n            \"Napoli\": 418,\r\n            \"Bari\": 466\r\n        },\r\n        \"Roma\":{\r\n            \"Bologna\": 376,\r\n            \"Firenze\": 274,\r\n            \"Ancona\": 297,\r\n            \"Napoli\": 226,\r\n            \"Bari\": 432\r\n        },\r\n        \"Napoli\":{\r\n            \"Ancona\": 418,\r\n            \"Roma\": 226,\r\n            \"Bari\": 266,\r\n            \"Catanzaro\": 403\r\n        },\r\n        \"Bari\":{\r\n            \"Ancona\": 466,\r\n            \"Roma\": 432,\r\n            \"Napoli\": 266,\r\n            \"Catanzaro\": 354\r\n        },\r\n        \"Catanzaro\":{\r\n            \"Napoli\": 403,\r\n            \"Bari\": 354\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/create-model",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"create-model"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "execute-model",
+			"item": [
+				{
+					"name": "Success w/ id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"model_id\": 1,\r\n    \"start\": \"Milano\",\r\n    \"goal\": \"Napoli\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/execute-model",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"execute-model"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Revision alreasy exist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"model_id\": 1,\r\n    \"start\": \"Milano\",\r\n    \"goal\": \"Napoli\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/execute-model",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"execute-model"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Success w/o id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"model_id\": -1,\r\n    \"start\": \"Milano\",\r\n    \"goal\": \"Roma\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/execute-model",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"execute-model"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "No existing id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"model_id\": 100,\r\n    \"start\": \"Milano\",\r\n    \"goal\": \"Catanzaro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/execute-model",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"execute-model"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid node",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"model_id\": 1,\r\n    \"start\": \"Capracotta\",\r\n    \"goal\": \"Catanzaro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/execute-model",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"execute-model"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "create-revision",
+			"item": [
+				{
+					"name": "Success add single node",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"model_id\": 1,\r\n    \"start\": \"Ancona\",\r\n    \"goal\": \"Catanzaro\",\r\n    \"add_node\": [[\"Ancona\"]],\r\n    \"add_arch\": [{\"Bari\":450, \"Napoli\": 418, \"Roma\": 297}],\r\n    \"remove_node\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/create-revision",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"create-revision"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Success add multiple node",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"model_id\": 1,\r\n    \"start\": \"Ancona\",\r\n    \"goal\": \"Catanzaro\",\r\n    \"add_node\": [[\"Ancona\"], [\"Roma\"]],\r\n    \"add_arch\": [{\"Bari\":450, \"Napoli\": 418, \"Roma\": 297}, {\"Bari\":150, \"Napoli\": 250}],\r\n    \"remove_node\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/create-revision",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"create-revision"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Success remove single node",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"model_id\": 1,\r\n    \"start\": \"Ancona\",\r\n    \"goal\": \"Catanzaro\",\r\n    \"add_node\": \"\",\r\n    \"add_arch\": null,\r\n    \"remove_node\": [\"Bari\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/create-revision",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"create-revision"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Success remove multiple node",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"model_id\": 1,\r\n    \"start\": \"Ancona\",\r\n    \"goal\": \"Catanzaro\",\r\n    \"add_node\": \"\",\r\n    \"add_arch\": null,\r\n    \"remove_node\": [[\"Bari\"],[\"Roma\"]]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/create-revision",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"create-revision"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Success start or goal change",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"model_id\": 1,\r\n    \"start\": \"Ancona\",\r\n    \"goal\": \"Roma\",\r\n    \"add_node\": \"\",\r\n    \"add_arch\": null,\r\n    \"remove_node\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/create-revision",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"create-revision"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "No existing revision",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"model_id\": 100,\r\n    \"start\": \"Ancona\",\r\n    \"goal\": \"Catanzaro\",\r\n    \"add_node\": \"\",\r\n    \"add_arch\": null,\r\n    \"remove_node\": [\"Bari\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/create-revision",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"create-revision"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "disable-revision",
+			"item": [
+				{
+					"name": "Success",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"revision_id\": 1,\r\n    \"date\": 16601454407156\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/disable-revision",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"disable-revision"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Revision does not exist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"revision_id\": 31,\r\n    \"date\": 1660043789043\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/disable-revision",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"disable-revision"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "show-cancelled-revision",
+			"item": [
+				{
+					"name": "Success",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/show-cancelled-revision",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"show-cancelled-revision"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "enable-revision",
+			"item": [
+				{
+					"name": "Success",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"revision_id\": 1,\r\n    \"date\":1660145430640\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/enable-revision",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"enable-revision"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Revision does not exist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"revision_id\": 31,\r\n    \"date\": 1660043789043\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/enable-revision",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"enable-revision"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "show-models",
+			"item": [
+				{
+					"name": "Success no filter",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"n_node\": null,\r\n    \"n_arch\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/show-models",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"show-models"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Success node filter",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"n_node\": 10,\r\n    \"n_arch\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/show-models",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"show-models"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Success arch filter",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"n_node\": null,\r\n    \"n_arch\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/show-models",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"show-models"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Success node and arch filter",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"n_node\": 10,\r\n    \"n_arch\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/show-models",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"show-models"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "show-revisions",
+			"item": [
+				{
+					"name": "Success no filter",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"n_variables\": null,\r\n    \"date\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/show-revisions",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"show-revisions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Success n_variables filter",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"n_variables\": 30,\r\n    \"date\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/show-revisions",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"show-revisions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Success date filter",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"n_variables\": null,\r\n    \"date\": 1660145430640\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/show-revisions",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"show-revisions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Success date and variables filter",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"n_variables\": 30,\r\n    \"date\": 1660145430640\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/show-revisions",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"show-revisions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "simulate-model",
+			"item": [
+				{
+					"name": "Success single arch",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"model_id\": 1,\r\n    \"start\": \"Ancona\",\r\n    \"goal\": \"Catanzaro\",\r\n    \"arch_to_change\": [[\"Ancona\", \"Bari\"]],\r\n    \"other_arch\": [{\"Napoli\": 418, \"Roma\": 297}],\r\n    \"start_stop_step\": [[450, 550, 50]]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/simulate-model",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"simulate-model"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Success multiple arch",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"model_id\": 1,\r\n    \"start\": \"Ancona\",\r\n    \"goal\": \"Catanzaro\",\r\n    \"arch_to_change\": [[\"Ancona\", \"Bari\"], [\"Ancona\", \"Napoli\"]],\r\n    \"other_arch\": [{\"Napoli\": 418, \"Roma\": 297}, {\"Roma\": 297}],\r\n    \"start_stop_step\": [[450, 550, 50], [100, 150, 50]]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/simulate-model",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"simulate-model"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "No existing id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2hAZGouaXQifQ.uiQQxnLHBNmeQe-X4vJCvvGJAi2mzRTB6oLj4c-dENE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"model_id\": 31,\r\n    \"start\": \"Ancona\",\r\n    \"goal\": \"Catanzaro\",\r\n    \"arch_to_change\": [[\"Ancona\", \"Bari\"]],\r\n    \"other_arch\": [{\"Napoli\": 418, \"Roma\": 297}],\r\n    \"start_stop_step\": [[450, 550, 50]]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/simulate-model",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"simulate-model"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
