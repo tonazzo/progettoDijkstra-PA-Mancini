@@ -393,7 +393,8 @@ Gli step sono i seguenti:
 5. Il programma è in esecuzione.
 
 # Testing
-Si può testare il progetto eseguendo una serie di test predefiniti, per fare ciò occorre importare all'interno di Postman la collection *DijkstraCollection.postman_collection* che si trova in questo repository. I token **JWT**, sono stati generati, utilizzando JWT.IO, tramite la chiave 'no'.  
+Si può testare il progetto eseguendo una serie di test predefiniti, per fare ciò occorre importare all'interno di Postman la collection *DijkstraCollection.postman_collection* che si trova in questo repository.   
+I token **JWT**, sono stati generati, utilizzando JWT.IO, tramite la chiave 'no'.  
 **Essendo il seed valorizzato solamente per gli utenti è suggerito seguire l'ordine delle chiamate così come sono ordinate nella collection.**  
 
 # Autori
