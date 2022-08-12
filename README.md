@@ -5,6 +5,7 @@ Progetto per del corso di Programmazione Avanzata tenuto dal prof. Mancini
 Il progetto consiste in un sistema che consenta di gestire la creazione e valutazione di modelli di ottimizzazione su grafo; l'algoritmo utilizzato per calcolare il cammino minimo è quello di **Dijkstra**.  
 Al fine di sviluppare il progetto, abbiamo utilizzato come grafo d'esempio la mappa dell'Italia che collega alcuni capoluoghi di regione:
 ![italy_map_route](https://raw.githubusercontent.com/tonazzo/progettoDijkstra-PA-Mancini/main/italy_map_route.png)  
+Un ulteriore grafo su cui poter effettuare dei test è quello relativo alle fermate della metropolitano di Milano.  
 Il sistema deve prevedere la possibilità di gestire eventuali revisioni dei modelli e di eseguire delle simulazioni.
 In particolare il sistema deve avere le seguenti funzionalità:
 
@@ -129,7 +130,7 @@ Da effettuare tramite token **JWT** che deve contenere un payload JSON con la se
 * Specificando la versione
 ```json
 {
-    "model_id": "32",
+    "model_id": 1,
     "start": "Milano",
     "goal": "Bari"
 }
@@ -137,7 +138,7 @@ Da effettuare tramite token **JWT** che deve contenere un payload JSON con la se
 * Default
 ```json
 {
-    "model_id": "-1",
+    "model_id": -1,
     "start": "Milano",
     "goal": "Catanzaro"
 }
@@ -149,7 +150,7 @@ Da effettuare tramite token **JWT** che deve contenere un payload JSON con la se
 * Aggiunta di un singolo nodo
 ```json
 {
-    "model_id": 32,
+    "model_id": 1,
     "start": "Ancona",
     "goal": "Catanzaro",
     "add_node": [["Ancona"]],
@@ -160,7 +161,7 @@ Da effettuare tramite token **JWT** che deve contenere un payload JSON con la se
 * Aggiunta di multipli nodi
 ```json
 {
-    "model_id": 32,
+    "model_id": 1,
     "start": "Ancona",
     "goal": "Catanzaro",
     "add_node": [["Ancona"], ["Ancona"]],
@@ -171,7 +172,7 @@ Da effettuare tramite token **JWT** che deve contenere un payload JSON con la se
 * Cancellazione di un singolo nodo
 ```json
 {
-    "model_id": 32,
+    "model_id": 1,
     "start": "Ancona",
     "goal": "Catanzaro",
     "add_node": "",
@@ -182,7 +183,7 @@ Da effettuare tramite token **JWT** che deve contenere un payload JSON con la se
 * Cancellazione di multipli nodi
 ```json
 {
-    "model_id": 32,
+    "model_id": 1,
     "start": "Ancona",
     "goal": "Catanzaro",
     "add_node": "",
@@ -193,7 +194,7 @@ Da effettuare tramite token **JWT** che deve contenere un payload JSON con la se
 * Cambio Start o Goal
 ```json
 {
-    "model_id": 32,
+    "model_id": 1,
     "start": "Ancona",
     "goal": "Roma",
     "add_node": "",
@@ -271,7 +272,7 @@ Tramite questa richiesta è possibile cancellare una revisione di un modello.
 Da effettuare tramite token **JWT** che deve contenere un payload JSON con la seguente struttura:
 ```json
 {
-    "revision_id": 32,
+    "revision_id": 1,
     "date": 1660043789043
 }
 ```
@@ -286,7 +287,7 @@ Tramite questa richiesta è possibile ripristinare una revisione che è stata ca
 Da effettuare tramite token JWT che deve contenere un payload JSON con la seguente struttura:
 ```json
 {
-    "revision_id": 32,
+    "revision_id": 1,
     "date": 1660043789043
 }
 ```
@@ -300,7 +301,7 @@ Da effettuare tramite token **JWT** che deve contenere un payload JSON con la se
 * Variando singolo arco
 ```json
 {
-    "model_id": 32,
+    "model_id": 1,
     "start": "Ancona",
     "goal": "Catanzaro",
     "arch_to_change": [["Ancona", "Bari"]],
@@ -311,7 +312,7 @@ Da effettuare tramite token **JWT** che deve contenere un payload JSON con la se
 * Variando multipli archi
 ```json
 {
-    "model_id": 32,
+    "model_id": 1,
     "start": "Ancona",
     "goal": "Catanzaro",
     "arch_to_change": [["Ancona", "Bari"], ["Ancona", "Napoli"]],
@@ -386,10 +387,15 @@ Per poter eseguire il progetto è necessario aver installato **Docker**.
 
 Gli step sono i seguenti:
 1. Clonare repository,
-2. Attivare docker,
+2. Avviare docker,
 3. All'interno della cartella, aprire il terminale e digitare: *docker compose build* (Attendere che l'esecuzione sia completata),
 4. Digitare: *docker compose up* (Attendere che l'esecuzione sia completata),
 5. Il programma è in esecuzione.
 
+# Testing
+Si può testare il progetto eseguendo una serie di test predefiniti, per fare ciò occorre importare all'interno di Postman la collection *DijkstraCollection.postman_collection* che si trova in questo repository. I token **JWT**, sono stati generati, utilizzando JWT.IO, tramite la chiave 'no'.  **Essendo il seed valorizzato solamente per gli utenti è suggerito seguire l'ordine delle chiamate così come sono ordinate nella collection.**  
 
+# Autori
+### Baldascino Giovanni
+### Monaco Antonio
 
