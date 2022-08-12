@@ -4,7 +4,7 @@ Progetto per del corso di Programmazione Avanzata tenuto dal prof. Mancini
 ## Obiettivo del progetto
 Il progetto consiste in un sistema che consenta di gestire la creazione e valutazione di modelli di ottimizzazione su grafo; l'algoritmo utilizzato per calcolare il cammino minimo è quello di **Dijkstra**.  
 Al fine di sviluppare il progetto, abbiamo utilizzato come grafo d'esempio la mappa dell'Italia che collega alcuni capoluoghi di regione:
-![italy_map_route](https://raw.githubusercontent.com/tonazzo/progettoDijkstra-PA-Mancini/main/italy_map_route.png)
+![italy_map_route](https://raw.githubusercontent.com/tonazzo/progettoDijkstra-PA-Mancini/main/italy_map_route.png)  
 Il sistema deve prevedere la possibilità di gestire eventuali revisioni dei modelli e di eseguire delle simulazioni.
 In particolare il sistema deve avere le seguenti funzionalità:
 
