@@ -388,9 +388,8 @@ Per poter eseguire il progetto è necessario aver installato **Docker**.
 Gli step sono i seguenti:
 1. Clonare repository,
 2. Avviare docker,
-3. All'interno della cartella, aprire il terminale e digitare: *docker compose build* (Attendere che l'esecuzione sia completata),
-4. Digitare: *docker compose up* (Attendere che l'esecuzione sia completata),
-5. Il programma è in esecuzione.
+3. All'interno della cartella, digitare: *docker compose up* (Attendere che l'esecuzione sia completata),
+4. Il programma è in esecuzione.
 
 # Testing
 Si può testare il progetto eseguendo una serie di test predefiniti, per fare ciò occorre importare all'interno di Postman la collection *DijkstraCollection.postman_collection* che si trova in questo repository.   
