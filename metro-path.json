@@ -1,0 +1,69 @@
+{
+    "description":
+    {
+        "Comasina":{
+            "Zara": 781
+        },
+        "Bignami":{
+            "Zara": 541
+        },
+        "Zara":{
+            "Comasina": 781,
+            "Bignami": 541,
+            "Lotto": 782,
+            "Garibaldi FS": 481,
+            "Centrale FS": 420
+        },
+        "San Siro":{
+            "Lotto": 421
+        },
+        "Lotto":{
+            "San Siro": 421,
+            "Zara": 782,
+            "Garibaldi FS": 780,
+            "Cadorna": 840
+        },
+        "Garibaldi FS":{
+            "Lotto": 780,
+            "Zara": 481,
+            "Cadorna": 960,
+            "Centrale FS": 900
+        },
+        "Cadorna":{
+            "Lotto": 840,
+            "Garibaldi FS": 960,
+            "Duomo": 482,
+            "Assago": 1680
+        },
+        "Assago":{
+            "Cadorna": 1680
+        },
+        "Centrale FS":{
+            "Zara": 420,
+            "Garibaldi FS": 900,
+            "Duomo": 540,
+            "Loreto": 1080
+        },
+        "Duomo":{
+            "Cadorna": 482,
+            "Centrale FS": 540,
+            "San Donato": 1081,
+            "Loreto": 660
+        },
+        "San Donato":{
+            "Duomo": 1081
+        },
+        "Loreto":{
+            "Duomo": 660,
+            "Centrale FS": 1080,
+            "Turro": 480,
+            "Lambrate": 1020
+        },
+        "Turro":{
+            "Loreto": 480
+        },
+        "Lambrate":{
+            "Loreto": 1020
+        }
+    }
+}
